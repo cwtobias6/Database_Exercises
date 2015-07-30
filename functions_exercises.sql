@@ -18,7 +18,8 @@ ORDER BY birth_date ASC, hire_date ASC;
 SELECT concat(last_name,' ', first_name) AS names,count(last_name) AS number_of_ppl_with_last_name
 FROM employees
 WHERE (last_name LIKE '%q%') AND (last_name NOT LIKE '%qu%')
-GROUP BY last_name;
+GROUP BY names
+ORDER BY number_of_ppl_with_last_name DESC;
 
 
 
