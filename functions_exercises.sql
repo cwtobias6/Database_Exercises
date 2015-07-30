@@ -1,5 +1,5 @@
 
-SELECT count(*)
+SELECT count(*), gender
 FROM employees
 WHERE first_name IN('Irena','Vidya','Maya')
 GROUP BY gender;
