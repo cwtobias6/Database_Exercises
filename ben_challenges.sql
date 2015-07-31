@@ -9,10 +9,10 @@ ON d.dept_no = dman.dept_no;
 
 -- The name and title of all employees whose title starts with "Senior" 167,963 rows
 SELECT CONCAT(e.first_name, ' ', e.last_name) AS name, t.title AS their_title
-FROM employees as e
+FROM employees AS e
 JOIN titles AS t
 ON t.emp_no = e.emp_no
-WHERE t.title LIKE 'senior%' AND dman.to_date >=now();
+WHERE t.title LIKE 'senior%' AND t.to_date >=now();
 
 --The departmentment and manager name where the manager is female
 SELECT d.dept_name AS department_name, CONCAT(e.first_name, ' ', e.last_name) AS manager
